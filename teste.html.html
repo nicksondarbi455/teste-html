@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Nick</title>
+
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        button {
+            padding: 12px 35px;
+            margin: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #sim {
+            background-color: #28a745;
+            color: white;
+        }
+
+        #nao {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Vai enviar foto TOTALMENTE PELADA HOJE??</h1>
+
+        <button id="sim" onclick="abrirVideo()">Sim</button>
+        <button id="nao" onclick="moverBotao()">Não</button>
+
+    </div>
+
+
+    <script>
+
+        function abrirVideo() {
+            window.location.href = "https://www.youtube.com/watch?v=NSU2hJ5wT08";
+        }
+        function moverBotao() {
+            let botao = document.getElementById("nao");
+
+            let largura = window.innerWidth - botao.offsetWidth;
+            let altura = window.innerHeight - botao.offsetHeight;
+
+            let novaX = Math.random() * largura;
+            let novaY = Math.random() * altura;
+
+            botao.style.position = "fixed";
+            botao.style.left = novaX + "px";
+            botao.style.top = novaY + "px";
+        }
+    </script>
+
+</body>
+
+</html>
